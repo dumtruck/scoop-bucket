@@ -12,7 +12,7 @@
         "64bit": {
             "shortcuts": [
                 [
-                    "cheatengine-x86_64-SSE4-AVX2.exe",
+                    "Cheat Engine.exe",
                     "Cheat Engine"
                 ],
                 [
@@ -28,7 +28,7 @@
         "32bit": {
             "shortcuts": [
                 [
-                    "cheatengine-i386.exe",
+                    "Cheat Engine.exe",
                     "Cheat Engine"
                 ],
                 [
