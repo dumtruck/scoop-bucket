@@ -1,10 +1,10 @@
 {
-    "version": "2.2.0",
+    "version": "2.2.1",
     "description": "Easily download and manage game cheats for your convenience.",
     "homepage": "https://github.com/dyang886/Game-Cheats-Manager",
     "license": "GPL-3.0",
-    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.2.0/Game.Cheats.Manager.Setup.2.2.0.exe",
-    "hash": "19EB208F4108EA273AFCDD19F48F1ED83742AC8047E74691AA8709AF2FE6DF51",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.2.1/Game.Cheats.Manager.Setup.2.2.1.exe",
+    "hash": "445585f6ab2da56309f3034880fd736bfc7464263d06481ae82e413b426bfd6d",
     "bin": "Game Cheats Manager.exe",
     "shortcuts": [
         [
@@ -13,14 +13,12 @@
         ]
     ],
     "innosetup": true,
-    "persist": [
-        "apps"
-    ],
+    "persist": "apps",
     "checkver": {
         "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/latest",
         "regex": "v(\\d+\\.\\d+\\.\\d+)"
     },
     "autoupdate": {
-        "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v$version/Game.Cheats.Manager.Setup.$version_Windows.exe"
+        "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v$version/Game.Cheats.Manager.Setup.$version.exe"
     }
 }
