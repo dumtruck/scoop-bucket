@@ -13,12 +13,12 @@
             "Dism++"
         ]
     ],
+    "persist": "Config.ini",
     "checkver": {
-        "url": "https://github.com/Chuyu-Team/Dism-Multi-language/releases",
-        "regex": "releases/download/v(?<tag>[\\d.]+)/Dism\\+\\+(?<filenameVer>[^/\"]+?)\\.zip",
-        "replace": "${tag}"
+        "github": "https://github.com/Chuyu-Team/Dism-Multi-language",
+        "regex": "download/v(?<version>[\\d\\.]+)/Dism%2B%2B(?<filenameVer>[\\w\\.]+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://github.com/Chuyu-Team/Dism-Multi-language/releases/download/v$matchTag/Dism++$matchFilenameVer.zip"
+        "url": "https://github.com/Chuyu-Team/Dism-Multi-language/releases/download/v$version/Dism++$filenameVer.zip"
     }
 }
