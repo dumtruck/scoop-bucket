@@ -1,0 +1,103 @@
+# 🚚 Scoop-Dumtruck
+
+> *收录那些官方仓库不会接纳的非主流软件*
+
+精选主流 bucket 忽略的实用工具——开发者工具、极客利器、ACGN 应用等。
+
+[![Excavator](https://github.com/dumtruck/scoop-bucket/actions/workflows/excavator.yml/badge.svg)](https://github.com/dumtruck/scoop-bucket/actions/workflows/excavator.yml)
+[![License](https://img.shields.io/badge/license-Unlicense-blue)](LICENSE)
+
+**[🇬🇧 English](README.md)**
+
+---
+
+## 📦 软件目录
+
+### 💻 开发者工具
+
+| 软件 | 描述 |
+|------|------|
+| **[fresh](https://github.com/sinelaw/fresh)** | 开箱即用的终端文本编辑器 |
+| **[ut](https://github.com/ksdme/ut)** | 快速轻量的 CLI 工具集 |
+| **[seaweedfs](https://github.com/seaweedfs/seaweedfs)** | 高性能分布式存储系统 |
+
+### 🔧 极客工具
+
+| 软件 | 描述 |
+|------|------|
+| **[Cheat Engine](https://cheatengine.org)** | 经典内存扫描器与游戏调试工具 |
+| **[Game-Cheats-Manager](https://github.com/dyang886/Game-Cheats-Manager)** | 游戏修改器下载管理器 |
+| **[Wemod-Patcher](https://github.com/k1tbyte/Wemod-Patcher)** | WeMod Pro 功能解锁补丁 |
+| **[Watt-Toolkit](https://github.com/BeyondDimension/SteamTools)** | Steam++ 开源多功能工具箱 |
+| **[ContextMenuManager](https://bluepointlilac.github.io/ContextMenuManager)** | Windows 右键菜单管理器 |
+| **[Dism++](https://github.com/Chuyu-Team/Dism-Multi-language)** | 强大的 Windows 系统精简优化工具 |
+
+### 🎌 ACGN 工具
+
+| 软件 | 描述 |
+|------|------|
+| **[JHenTai](https://github.com/jiangtian616/JHenTai)** | E-Hentai / ExHentai 跨平台漫画阅读器 |
+
+### 🤖 AI 工具
+
+*敬请期待...*
+
+---
+
+## 🚀 快速开始
+
+### 添加 Bucket
+
+```powershell
+scoop bucket add dumtruck https://github.com/dumtruck/scoop-bucket.git
+```
+
+### 验证添加
+
+```powershell
+scoop bucket list
+```
+
+### 安装软件
+
+```powershell
+# 安装 Cheat Engine
+scoop install dumtruck/cheat-engine
+
+# 安装 Dism++
+scoop install dumtruck/dismplusplus
+
+# 安装 Steam++ (Watt Toolkit)
+scoop install dumtruck/watt-toolkit
+```
+
+### 更新软件
+
+```powershell
+scoop update *
+```
+
+---
+
+## ⚠️ 使用须知
+
+- 部分软件可能需要**管理员权限**运行
+- 游戏修改工具请仅用于**单机游戏**
+- 使用这些工具产生的任何后果由用户自行承担
+
+---
+
+## 🤝 参与贡献
+
+欢迎提交 Pull Request！提交前请确保：
+
+- 软件有明确的开源许可或免费使用授权
+- 提供有效的 `checkver` 和 `autoupdate` 配置
+- 遵循 [Scoop App Manifests](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifests) 规范
+
+---
+
+## 📄 许可证
+
+[The Unlicense](LICENSE) - 公共领域
+
