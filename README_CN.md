@@ -31,6 +31,8 @@
 | **[Watt-Toolkit](https://github.com/BeyondDimension/SteamTools)** | Steam++ 开源多功能工具箱 |
 | **[ContextMenuManager](https://bluepointlilac.github.io/ContextMenuManager)** | Windows 右键菜单管理器 |
 | **[Dism++](https://github.com/Chuyu-Team/Dism-Multi-language)** | 强大的 Windows 系统精简优化工具 |
+| **[UEFIExtract](https://github.com/LongSoft/UEFITool)** | UEFI 固件镜像提取工具（命令行版） |
+| **[UEFIFind](https://github.com/LongSoft/UEFITool)** | UEFI 固件镜像查看与编辑工具（新引擎） |
 
 ### 🎌 ACGN 工具
 
@@ -61,14 +63,11 @@ scoop bucket list
 ### 安装软件
 
 ```powershell
-# 安装 Cheat Engine
+# 不带前缀安装（推荐）
+scoop install cheat-engine
+
+# 带前缀安装（仅在名称冲突时使用）
 scoop install dumtruck/cheat-engine
-
-# 安装 Dism++
-scoop install dumtruck/dismplusplus
-
-# 安装 Steam++ (Watt Toolkit)
-scoop install dumtruck/watt-toolkit
 ```
 
 ### 更新软件
@@ -84,6 +83,7 @@ scoop update *
 - 部分软件可能需要**管理员权限**运行
 - 游戏修改工具请仅用于**单机游戏**
 - 使用这些工具产生的任何后果由用户自行承担
+- **仅保证 x64 架构可用** - 其他架构可能不受支持
 
 ---
 
@@ -100,4 +100,6 @@ scoop update *
 ## 📄 许可证
 
 [The Unlicense](LICENSE) - 公共领域
+
+**注意：** 本仓库中具体软件的许可证以上游仓库为准，请参考各软件原始项目的许可证声明。
 

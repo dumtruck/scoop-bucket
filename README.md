@@ -31,6 +31,8 @@ Curating practical tools that mainstream buckets overlook — developer utilitie
 | **[Watt-Toolkit](https://github.com/BeyondDimension/SteamTools)** | Open-source Steam multifunctional toolbox (Steam++) |
 | **[ContextMenuManager](https://bluepointlilac.github.io/ContextMenuManager)** | Manage Windows right-click context menus |
 | **[Dism++](https://github.com/Chuyu-Team/Dism-Multi-language)** | Powerful Windows system optimization & cleanup tool |
+| **[UEFIExtract](https://github.com/LongSoft/UEFITool)** | UEFI firmware image extractor (Command Line) |
+| **[UEFIFind](https://github.com/LongSoft/UEFITool)** | UEFI firmware image viewer and editor (New Engine) |
 
 ### 🎌 ACGN Tools
 
@@ -61,14 +63,11 @@ scoop bucket list
 ### Install apps
 
 ```powershell
-# Install Cheat Engine
+# Install without prefix (recommended)
+scoop install cheat-engine
+
+# Install with prefix (use only when there's a name conflict)
 scoop install dumtruck/cheat-engine
-
-# Install Dism++
-scoop install dumtruck/dismplusplus
-
-# Install Steam++ (Watt Toolkit)
-scoop install dumtruck/watt-toolkit
 ```
 
 ### Update apps
@@ -84,6 +83,7 @@ scoop update *
 - Some apps may require **Administrator privileges**
 - Game modification tools are intended for **single-player games only**
 - Users are responsible for any consequences arising from the use of these tools
+- **Only x64 architecture is guaranteed to work** - other architectures may not be supported
 
 ---
 
@@ -100,3 +100,5 @@ Pull requests are welcome! Before submitting, please ensure:
 ## 📄 License
 
 [The Unlicense](LICENSE) - Public Domain
+
+**Note:** The licenses of individual software packages in this bucket are determined by their respective upstream repositories. Please refer to the original project's license for each application.
