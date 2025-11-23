@@ -20,6 +20,8 @@
 | **[fresh](https://github.com/sinelaw/fresh)** | 开箱即用的终端文本编辑器 |
 | **[ut](https://github.com/ksdme/ut)** | 快速轻量的 CLI 工具集 |
 | **[seaweedfs](https://github.com/seaweedfs/seaweedfs)** | 高性能分布式存储系统 |
+| **[minio (archive)](https://github.com/minio/minio)** | 高性能对象存储服务器（已归档版本，包含 WebUI 管理） |
+| **[minio-client (archive)](https://github.com/minio/mc)** | MinIO 对象存储命令行客户端（已归档版本） |
 
 ### 🔧 极客工具
 

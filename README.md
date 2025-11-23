@@ -20,6 +20,8 @@ Curating practical tools that mainstream buckets overlook — developer utilitie
 | **[fresh](https://github.com/sinelaw/fresh)** | A terminal text editor you can just use |
 | **[ut](https://github.com/ksdme/ut)** | A fast, lightweight CLI utility toolkit |
 | **[seaweedfs](https://github.com/seaweedfs/seaweedfs)** | Fast distributed storage system for blobs, objects & files |
+| **[minio (archive)](https://github.com/minio/minio)** | High-performance object storage server (archived build with legacy WebUI) |
+| **[minio-client (archive)](https://github.com/minio/mc)** | Command-line client for MinIO object storage (archived) |
 
 ### 🔧 Geek Tools
 
