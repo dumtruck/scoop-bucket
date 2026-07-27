@@ -1,6 +1,6 @@
 {
     "version": "b10152",
-    "description": "Inference of LLaMA model in pure C/C++ (Vulkan version)",
+    "description": "DEPRECATED: Use the officially maintained versions/llama.cpp-vulkan package.",
     "homepage": "https://github.com/ggml-org/llama.cpp",
     "license": {
         "identifier": "MIT",
@@ -32,15 +32,15 @@
         "llama-tts.exe"
     ],
     "persist": "models",
-    "checkver": {
-        "github": "https://github.com/ggml-org/llama.cpp",
-        "regex": "/releases/tag/(b[\\d]+)"
+    "suggest": {
+        "Officially maintained llama.cpp Vulkan package": "versions/llama.cpp-vulkan"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/ggml-org/llama.cpp/releases/download/$version/llama-$version-bin-win-vulkan-x64.zip"
-            }
-        }
-    }
+    "pre_install": [
+        "Write-Host '========================================================================' -ForegroundColor Yellow",
+        "Write-Host ' NOTICE: apeiraco/llama.cpp-vulkan is deprecated.' -ForegroundColor Yellow",
+        "Write-Host ' Use the official replacement: versions/llama.cpp-vulkan' -ForegroundColor Yellow",
+        "Write-Host ' Run: scoop uninstall llama.cpp-vulkan' -ForegroundColor Yellow",
+        "Write-Host ' Then: scoop bucket add versions; scoop install versions/llama.cpp-vulkan' -ForegroundColor Yellow",
+        "Write-Host '========================================================================' -ForegroundColor Yellow"
+    ]
 }

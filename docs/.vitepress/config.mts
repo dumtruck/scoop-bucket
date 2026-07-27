@@ -45,6 +45,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Home', link: '/' },
+          { text: 'Changelog', link: '/changelog' },
           { text: 'License', link: '/license' },
           { text: 'GitHub', link: 'https://github.com/apeiraco/scoop-bucket' },
         ],
@@ -57,6 +58,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: '首页', link: '/zh/' },
+          { text: '更新日志', link: '/zh/changelog' },
           { text: '许可证', link: '/zh/license' },
           { text: 'GitHub', link: 'https://github.com/apeiraco/scoop-bucket' },
         ],

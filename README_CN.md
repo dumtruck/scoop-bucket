@@ -56,7 +56,9 @@
 | **[LunaTranslator](https://github.com/HIllya51/LunaTranslator)**           | 强大的 Galgame 翻译工具，支持 Hook/OCR/剪贴板等多种翻译方式          |
 | **[MTool](https://mtool.app/)**                                            | 游戏翻译与修改工具，提供免费基础功能与付费高级功能                   |
 | **[Watt-Toolkit](https://github.com/BeyondDimension/SteamTools)**          | Steam++ 开源多功能工具箱                                             |
-| **[Wand-Enhancer](https://github.com/k1tbyte/Wand-Enhancer)**              | WeMod Pro 功能解锁补丁                                               |
+| **[Wand-Enhancer](https://github.com/k1tbyte/Wand-Enhancer)**              | Local Wand client interoperability tool, built from source during installation |
+
+**Build warning:** Wand Enhancer intentionally publishes no prebuilt executable. Installation builds the tagged source locally, uses mise to provision Node.js, pnpm, and CMake, and requires Visual Studio C++ build tools, MSBuild, and the .NET Framework 4.8 targeting pack.
 
 ### 🏠 生活工具
 
@@ -73,11 +75,11 @@
 | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
 | **[cherry-studio](https://cherry-ai.com/)**                                          | 支持多种 LLM 供应商的桌面客户端                                        |
 | **[cockpit-tools](https://github.com/jlcodes99/cockpit-tools)**                      | 通用 AI IDE 账号管理工具，支持多账号切换、配额监控与多开实例管理        |
-| **[llama.cpp](https://github.com/ggml-org/llama.cpp)**                               | 纯 C/C++ 实现的 LLaMA 推理工具（cpu/cuda/hip/opencl/vulkan/sycl 变体） |
+| **[llama.cpp](https://github.com/ScoopInstaller/Versions)**                         | Deprecated locally; use the officially maintained Versions bucket variants |
 | **[LMStudio](https://lmstudio.ai/)**                                                | 本地大语言模型发现、下载与运行工具                                     |
 | **[Sakura-Launcher-GUI](https://github.com/PiDanShouRouZhouXD/Sakura_Launcher_GUI)** | SakuraLLM 的图形化启动器                                               |
 
-**说明：** 本仓库提供 `llama.cpp` 的多个变体清单（cpu/cuda/hip/opencl/vulkan/sycl）。上游官方发布目前没有 CUDA 13.1（cu131）版本，因此这里单独提供了 `llama.cpp-cu131` 包。
+**Deprecation notice:** All local `llama.cpp` manifests are frozen. Migrate to the matching `versions/llama.cpp-*` package maintained by [ScoopInstaller/Versions](https://github.com/ScoopInstaller/Versions). Replace `llama.cpp-hip-gfx1101` with `versions/llama.cpp-hip-radeon`.
 
 ---
 

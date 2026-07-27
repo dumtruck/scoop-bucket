@@ -1,6 +1,6 @@
 {
     "version": "b10152",
-    "description": "Inference of LLaMA model in pure C/C++ (OpenCL for Adreno GPUs)",
+    "description": "DEPRECATED: Use the officially maintained versions/llama.cpp-opencl package.",
     "homepage": "https://github.com/ggml-org/llama.cpp",
     "license": {
         "identifier": "MIT",
@@ -32,15 +32,15 @@
         "llama-tts.exe"
     ],
     "persist": "models",
-    "checkver": {
-        "github": "https://github.com/ggml-org/llama.cpp",
-        "regex": "/releases/tag/(b[\\d]+)"
+    "suggest": {
+        "Officially maintained llama.cpp OpenCL package": "versions/llama.cpp-opencl"
     },
-    "autoupdate": {
-        "architecture": {
-            "arm64": {
-                "url": "https://github.com/ggml-org/llama.cpp/releases/download/$version/llama-$version-bin-win-opencl-adreno-arm64.zip"
-            }
-        }
-    }
+    "pre_install": [
+        "Write-Host '========================================================================' -ForegroundColor Yellow",
+        "Write-Host ' NOTICE: apeiraco/llama.cpp-opencl is deprecated.' -ForegroundColor Yellow",
+        "Write-Host ' Use the official replacement: versions/llama.cpp-opencl' -ForegroundColor Yellow",
+        "Write-Host ' Run: scoop uninstall llama.cpp-opencl' -ForegroundColor Yellow",
+        "Write-Host ' Then: scoop bucket add versions; scoop install versions/llama.cpp-opencl' -ForegroundColor Yellow",
+        "Write-Host '========================================================================' -ForegroundColor Yellow"
+    ]
 }

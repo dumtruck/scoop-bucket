@@ -58,7 +58,9 @@ Curating practical tools that mainstream buckets overlook — developer utilitie
 | **[LunaTranslator](https://github.com/HIllya51/LunaTranslator)**           | A Visual Novel translation tool, with HOOK / OCR / clipboard support              |
 | **[MTool](https://mtool.app/)**                                            | A game translation and modding tool with free and paid tiers                      |
 | **[Watt-Toolkit](https://github.com/BeyondDimension/SteamTools)**          | Open-source Steam multifunctional toolbox (Steam++)                               |
-| **[Wand-Enhancer](https://github.com/k1tbyte/Wand-Enhancer)**              | Unlock WeMod Pro features for free                                                |
+| **[Wand-Enhancer](https://github.com/k1tbyte/Wand-Enhancer)**              | Local Wand client interoperability tool, built from source during installation    |
+
+**Build warning:** Wand Enhancer intentionally publishes no prebuilt executable. Installation builds the tagged source locally, uses mise to provision Node.js, pnpm, and CMake, and requires Visual Studio C++ build tools, MSBuild, and the .NET Framework 4.8 targeting pack.
 
 ### 🏠 Life Tools
 
@@ -75,11 +77,11 @@ Curating practical tools that mainstream buckets overlook — developer utilitie
 | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
 | **[cherry-studio](https://cherry-ai.com/)**                                          | Desktop client that supports multiple LLM providers                               |
 | **[cockpit-tools](https://github.com/jlcodes99/cockpit-tools)**                      | Universal AI IDE account manager with multi-account switching and quota monitoring |
-| **[llama.cpp](https://github.com/ggml-org/llama.cpp)**                               | Inference of LLaMA model in pure C/C++ (cpu/cuda/hip/opencl/vulkan/sycl variants) |
+| **[llama.cpp](https://github.com/ScoopInstaller/Versions)**                         | Deprecated locally; use the officially maintained Versions bucket variants       |
 | **[LMStudio](https://lmstudio.ai/)**                                                | Discover, download, and run local LLMs                                            |
 | **[Sakura-Launcher-GUI](https://github.com/PiDanShouRouZhouXD/Sakura_Launcher_GUI)** | A GUI Launcher for Sakura LLM                                                     |
 
-**Note:** `llama.cpp` has multiple manifests here (cpu/cuda/hip/opencl/vulkan/sycl). Upstream official releases currently do not provide a CUDA 13.1 (cu131) build, so this bucket includes a separate `llama.cpp-cu131` package.
+**Deprecation notice:** All local `llama.cpp` manifests are frozen. Migrate to the matching `versions/llama.cpp-*` package maintained by [ScoopInstaller/Versions](https://github.com/ScoopInstaller/Versions). Replace `llama.cpp-hip-gfx1101` with `versions/llama.cpp-hip-radeon`.
 
 ---
 

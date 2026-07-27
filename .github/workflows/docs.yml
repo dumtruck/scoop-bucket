@@ -12,6 +12,7 @@ on:
       - docs/**
       - README.md
       - README_CN.md
+      - CHANGELOG.md
       - LICENSE
       - AGENTS.md
       - justfile
