@@ -56,9 +56,9 @@
 | **[LunaTranslator](https://github.com/HIllya51/LunaTranslator)**           | 强大的 Galgame 翻译工具，支持 Hook/OCR/剪贴板等多种翻译方式          |
 | **[MTool](https://mtool.app/)**                                            | 游戏翻译与修改工具，提供免费基础功能与付费高级功能                   |
 | **[Watt-Toolkit](https://github.com/BeyondDimension/SteamTools)**          | Steam++ 开源多功能工具箱                                             |
-| **[Wand-Enhancer](https://github.com/k1tbyte/Wand-Enhancer)**              | Local Wand client interoperability tool, built from source during installation |
+| **[Wand-Enhancer](https://github.com/k1tbyte/Wand-Enhancer)**              | 本地 Wand 客户端互操作工具，安装时从源码构建                              |
 
-**Build warning:** Wand Enhancer intentionally publishes no prebuilt executable. Installation builds the tagged source locally, uses mise from PATH (Scoop, WinGet, or a standalone binary) to provision Node.js, pnpm, and CMake, and requires Visual Studio C++ build tools, MSBuild, and the .NET Framework 4.8 targeting pack.
+**构建警告：** Wand Enhancer 上游有意不发布预编译可执行文件。安装过程将在本机从对应标签的源码构建，使用 PATH 中由 Scoop、WinGet 或独立二进制方式安装的 mise 配置 Node.js、pnpm 和 CMake，并要求 Visual Studio C++ 构建工具、MSBuild 与 .NET Framework 4.8 Targeting Pack。
 
 ### 🏠 生活工具
 
@@ -165,6 +165,9 @@ scoop update *
 | **NSIS**            | `url` 后追加 `#/dl.7z` — 7-Zip 原生支持解压 NSIS，用 `extract_dir` 选取目标目录                           |
 | **Electron NSIS**   | `#/dl.7z` + `"extract_dir": "$PLUGINSDIR"` + `pre_install` 中用 `Expand-7zipArchive` 解压内部 `app-64.7z` |
 | **Zip 包裹 NSIS**   | `pre_install` 中两步 `Expand-7zipArchive`（NSIS 层 → `app-64.7z`）                                        |
+| **本机源码构建**    | 下载对应标签的源码，将工具链检查委托给共享辅助脚本，在安装期间构建并只暴露经过验证的产物                  |
+
+**可移植性：** 仅当构建产物能够自包含、不保留绝对构建路径且不依赖特定机器运行库时，安装结果才具有一定程度的可移植性；构建过程本身仍依赖兼容的本地工具链和网络。应固定由工具管理器配置的版本、隔离项目配置（例如使用 `mise --no-config`）、校验预期产物，并在失败时终止而不是回退到非官方二进制文件。
 
 ---
 

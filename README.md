@@ -159,14 +159,17 @@ The generated `restore-official-data.ps1` is location-portable (`$PSScriptRoot`)
 
 ### Common Installer Patterns
 
-| Type                 | Approach                                                                                                        |
-| -------------------- | --------------------------------------------------------------------------------------------------------------- |
-| **Zip / 7z**         | Direct `url` — Scoop auto-extracts; use `extract_dir` if needed                                                 |
-| **Single exe**       | `url` with `#/name.exe` fragment to keep the filename                                                           |
-| **Inno Setup**       | `"innosetup": true`                                                                                             |
-| **NSIS**             | Append `#/dl.7z` to `url` — 7-Zip natively extracts NSIS; use `extract_dir` to pick target folder               |
-| **Electron NSIS**    | `#/dl.7z` + `"extract_dir": "$PLUGINSDIR"` + `pre_install` to expand inner `app-64.7z` via `Expand-7zipArchive` |
-| **Zip-wrapped NSIS** | `pre_install` with two `Expand-7zipArchive` calls (NSIS layer → `app-64.7z`)                                    |
+| Type                   | Approach                                                                                                        |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------- |
+| **Zip / 7z**           | Direct `url` — Scoop auto-extracts; use `extract_dir` if needed                                                 |
+| **Single exe**         | `url` with `#/name.exe` fragment to keep the filename                                                           |
+| **Inno Setup**         | `"innosetup": true`                                                                                             |
+| **NSIS**               | Append `#/dl.7z` to `url` — 7-Zip natively extracts NSIS; use `extract_dir` to pick target folder               |
+| **Electron NSIS**      | `#/dl.7z` + `"extract_dir": "$PLUGINSDIR"` + `pre_install` to expand inner `app-64.7z` via `Expand-7zipArchive` |
+| **Zip-wrapped NSIS**   | `pre_install` with two `Expand-7zipArchive` calls (NSIS layer → `app-64.7z`)                                    |
+| **Local source build** | Download tagged source, delegate toolchain checks to shared helpers, build during installation, and expose only the verified artifact |
+
+**Portability:** The installed result is portable only when the built artifact is self-contained and does not retain absolute build paths or depend on machine-specific runtimes. The build process still requires a compatible local toolchain and network access. Pin provisioned tool versions, isolate project configuration (for example, `mise --no-config`), validate the expected artifact, and fail instead of falling back to unofficial binaries.
 
 ---
 
