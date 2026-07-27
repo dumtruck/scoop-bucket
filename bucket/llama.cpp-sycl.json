@@ -1,5 +1,5 @@
 {
-    "version": "b10152",
+    "version": "b10154",
     "description": "DEPRECATED: Use the officially maintained versions/llama.cpp-sycl package.",
     "homepage": "https://github.com/ggml-org/llama.cpp",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ggml-org/llama.cpp/releases/download/b10152/llama-b10152-bin-win-sycl-x64.zip",
-            "hash": "78a29b75950fbae57f61778df55b4eaae7ec7432452afecbbbfd614307465b41"
+            "url": "https://github.com/ggml-org/llama.cpp/releases/download/b10154/llama-b10154-bin-win-sycl-x64.zip",
+            "hash": "e4a53d9e87f32db5075d0bd5dee4c5a5dc5a61a3a6c1b049a5931562085661c8"
         }
     },
     "bin": [
