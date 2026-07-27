@@ -29,6 +29,19 @@ function Resolve-VisualStudioInstallation {
     return $installationPath.Trim()
 }
 
+function Resolve-MiseExecutable {
+    [CmdletBinding()]
+    param()
+
+    $mise = Get-Command mise -CommandType Application -ErrorAction SilentlyContinue |
+        Select-Object -First 1
+    if (-not $mise) {
+        throw "mise is required to provision the source-build toolchain. Install it with 'scoop install main/mise', or use a WinGet/standalone installation available on PATH."
+    }
+
+    return $mise.Source
+}
+
 function Invoke-MisePowerShellScript {
     [CmdletBinding()]
     param(
@@ -45,10 +58,7 @@ function Invoke-MisePowerShellScript {
         [string]$WorkingDirectory = (Split-Path -Parent $ScriptPath)
     )
 
-    $mise = Get-Command mise -CommandType Application -ErrorAction SilentlyContinue
-    if (-not $mise) {
-        throw 'mise is required to provision the source-build toolchain.'
-    }
+    $miseExecutable = Resolve-MiseExecutable
     if (-not (Test-Path -LiteralPath $ScriptPath -PathType Leaf)) {
         throw "Build script was not found: $ScriptPath"
     }
@@ -83,7 +93,7 @@ function Invoke-MisePowerShellScript {
     $originalLocation = (Get-Location).Path
     try {
         Set-Location -LiteralPath $WorkingDirectory
-        & $mise.Source @miseArguments
+        & $miseExecutable @miseArguments
         $exitCode = $LASTEXITCODE
     } finally {
         Set-Location -LiteralPath $originalLocation

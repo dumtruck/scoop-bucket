@@ -25,6 +25,7 @@ _Single source of truth for Agent identity, code standards, and project rules. S
 **Action Guidelines:**
 
 - Local exploration (downloading installers, extracting archives, inspecting file structures) MUST be done in the `temp/` folder. Create it if it doesn't exist.
+- Repository-wide Scoop manifest and style tests MUST exclude `temp/`, `node_modules/`, and other generated, downloaded, or extracted directories. If the test harness cannot exclude them, run the tests from a clean or sparse checkout instead.
 - To determine `extract_dir`, `persist`, `shortcuts`, `license`, etc., combine:
   1. Download and extract the installer/archive locally into `temp/` to inspect the actual file tree
   2. Read the upstream repository's README, docs, and source code for hints

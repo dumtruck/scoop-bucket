@@ -60,7 +60,7 @@ Curating practical tools that mainstream buckets overlook — developer utilitie
 | **[Watt-Toolkit](https://github.com/BeyondDimension/SteamTools)**          | Open-source Steam multifunctional toolbox (Steam++)                               |
 | **[Wand-Enhancer](https://github.com/k1tbyte/Wand-Enhancer)**              | Local Wand client interoperability tool, built from source during installation    |
 
-**Build warning:** Wand Enhancer intentionally publishes no prebuilt executable. Installation builds the tagged source locally, uses mise to provision Node.js, pnpm, and CMake, and requires Visual Studio C++ build tools, MSBuild, and the .NET Framework 4.8 targeting pack.
+**Build warning:** Wand Enhancer intentionally publishes no prebuilt executable. Installation builds the tagged source locally, uses mise from PATH (Scoop, WinGet, or a standalone binary) to provision Node.js, pnpm, and CMake, and requires Visual Studio C++ build tools, MSBuild, and the .NET Framework 4.8 targeting pack.
 
 ### 🏠 Life Tools
 

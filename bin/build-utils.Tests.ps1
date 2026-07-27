@@ -12,13 +12,26 @@ Describe 'Resolve-VisualStudioInstallation' {
     }
 }
 
+Describe 'Resolve-MiseExecutable' {
+    It 'uses the first mise executable found on PATH' {
+        Mock Get-Command {
+            @(
+                [pscustomobject]@{ Source = 'C:\scoop\shims\mise.exe' }
+                [pscustomobject]@{ Source = 'C:\Users\user\AppData\Local\Microsoft\WinGet\Links\mise.exe' }
+            )
+        } -ParameterFilter { $Name -eq 'mise' }
+
+        Resolve-MiseExecutable | Should -Be 'C:\scoop\shims\mise.exe'
+    }
+}
+
 Describe 'Invoke-MisePowerShellScript' {
     It 'reports a missing mise command before validating build paths' {
         Mock Get-Command { $null } -ParameterFilter { $Name -eq 'mise' }
 
         {
             Invoke-MisePowerShellScript -Tools 'node@22' -ScriptPath 'missing-build.ps1'
-        } | Should -Throw '*mise is required*'
+        } | Should -Throw "*scoop install main/mise*"
     }
 }
 

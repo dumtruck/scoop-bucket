@@ -11,6 +11,7 @@
 
 ### Fixed
 
+- Allowed Wand Enhancer source builds to use the first mise executable on PATH without forcing a Scoop-managed installation, with `scoop install main/mise` as the primary missing-tool guidance.
 - Made Dango Translator release-tag checks tolerate the upstream `Ver.` prefix.
 - Followed LunaTranslator's renamed x64 archive.
 - Made calibre-web autoupdate discover the revisioned Windows installer asset.

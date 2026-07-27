@@ -6,7 +6,6 @@
         "identifier": "Apache-2.0",
         "url": "https://github.com/k1tbyte/Wand-Enhancer/blob/master/LICENSE.md"
     },
-    "depends": "mise",
     "architecture": {
         "64bit": {
             "url": "https://github.com/k1tbyte/Wand-Enhancer/archive/refs/tags/1.0.9.4.zip",
@@ -18,7 +17,7 @@
         "script": [
             ". \"$bucketsdir\\apeiraco\\bin\\build-utils.ps1\"",
             "Write-Warning 'Wand Enhancer does not publish official prebuilt executables. Scoop will build an unsigned executable locally from the tagged upstream source.'",
-            "Write-Warning 'mise will provision Node.js, pnpm, and CMake for this build. The build also restores declared pnpm/NuGet dependencies from the network.'",
+            "Write-Warning 'mise from PATH will provision Node.js, pnpm, and CMake for this build. The build also restores declared pnpm/NuGet dependencies from the network.'",
             "$miseTools = @('node@22', 'pnpm@10.17.0', 'cmake@4')",
             "$vsComponents = @('Microsoft.Component.MSBuild', 'Microsoft.VisualStudio.Component.VC.Tools.x86.x64', 'Microsoft.Net.Component.4.8.TargetingPack')",
             "try {",
@@ -42,7 +41,7 @@
     ],
     "notes": [
         "WARNING: Upstream intentionally publishes no prebuilt executable. This package builds WandEnhancer.exe locally from the tagged source during installation.",
-        "Required tools: mise and Visual Studio/Build Tools with MSBuild, Desktop development with C++, and the .NET Framework 4.8 targeting pack.",
+        "Required tools: mise on PATH (installed by Scoop, WinGet, or as a standalone binary) and Visual Studio/Build Tools with MSBuild, Desktop development with C++, and the .NET Framework 4.8 targeting pack.",
         "mise provisions compatible Node.js, pnpm, and CMake versions without using project configuration. The local build also restores dependencies from the pnpm and NuGet registries and may take several minutes.",
         "The resulting executable is unsigned. Windows Defender or SmartScreen may warn; review the upstream source and build output before running it."
     ],
